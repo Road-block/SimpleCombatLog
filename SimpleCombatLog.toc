@@ -1,0 +1,48 @@
+﻿## Interface: 11200
+## Title: SimpleCombatLog |cff7fff7f -Ace2-|r
+## Notes: Suppress default combat messages, display simplified ones.
+## Notes-esES: Suprime los mensajes de combate por defecto, mostrando unos simplificados.
+## Version: 1.1.0.$Revision: 27327 $
+## Author: Rophy
+## OptionalDeps: Ace2, DewdropLib, ParserLib, RosterLib
+## X-Category: Interface Enhancements
+## X-eMail: rophy123@gmail.com
+## X-ReleaseDate: $Date: 2007-02-06 04:05:20 -0500 (Tue, 06 Feb 2007) $
+## X-Website: http://www.wowace.com/wiki/SimpleCombatLog
+## X-Embeds: Ace2, DewdropLib, ParserLib, RosterLib
+## X-RelSite-WoWI: 5008
+## X-RelSite-Curse: 4268
+## X-RelSite-UI.WoW: 2713
+## X-WoWIPortal: rophy
+
+## SavedVariables: SimpleCombatLogDB
+## SavedVariablesPerCharacter: SimpleCombatLogDBPerChar
+
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceOO-2.0\AceOO-2.0.lua
+Libs\AceConsole-2.0\AceConsole-2.0.lua
+Libs\AceAddon-2.0\AceAddon-2.0.lua
+Libs\AceDebug-2.0\AceDebug-2.0.lua
+Libs\AceEvent-2.0\AceEvent-2.0.lua
+Libs\AceHook-2.1\AceHook-2.1.lua
+Libs\Dewdrop-2.0\Dewdrop-2.0.lua
+Libs\RosterLib-2.0\RosterLib-2.0.lua
+Libs\ParserLib\ParserLib.lua
+#Libs\Compost-2.0\Compost-2.0.lua
+
+core.lua
+
+localization.lua
+localization-koKR.lua
+localization-esES.lua
+
+theme_presets.lua
+opt_fix_combatlog.lua
+
+opt_gui_core.lua
+opt_gui_color.lua
+opt_gui_format.lua
+opt_gui_theme.lua
+opt_gui_event.lua
+opt_gui_filter.lua
+opt_gui_watch.lua

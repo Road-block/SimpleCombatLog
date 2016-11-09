@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r27327 | rophy | 2007-02-06 04:05:20 -0500 (Tue, 06 Feb 2007) | 4 lines
+
+SimpleCombatLog:
+- Added license.txt
+- Changed version numbering.
+
+------------------------------------------------------------------------
+r26541 | kergoth | 2007-01-29 19:14:59 -0500 (Mon, 29 Jan 2007) | 1 line
+
+.Line ending fixups in .toc files (they werent in my .subversion/config autoprops)
+------------------------------------------------------------------------
+r26322 | rophy | 2007-01-27 19:44:35 -0500 (Sat, 27 Jan 2007) | 2 lines
+
+SimpleCombatLog:
+- fixed unwanted global.
+------------------------------------------------------------------------
+r25931 | kergoth | 2007-01-23 18:43:23 -0500 (Tue, 23 Jan 2007) | 1 line
+
+.Line ending fixups part 2: trunk/ (script ended prematurely).
+------------------------------------------------------------------------
+r24410 | funkydude | 2007-01-10 03:31:04 -0500 (Wed, 10 Jan 2007) | 1 line
+
+SimpleCombatLog: toc 20003
+------------------------------------------------------------------------
+
