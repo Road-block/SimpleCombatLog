@@ -6,9 +6,13 @@ local defaultFormats
 local defaultColors
 local L
 
+local reachLog = LoggingCombat and LoggingCombat("RAW") == 1
+
 -- tables which will be recycled.
 local cache1 = {}
 local cache2 = {}
+
+
  
 ------------------------
 --         Core         --
@@ -267,6 +271,7 @@ end
 
 function SimpleCombatLog:OnCombatEvent(event, info)
 	self:LevelDebug(2, "OnCombatEvent", event, arg1, info.type)
+        reachLog = LoggingCombat and LoggingCombat("RAW") == 1
 
 	-- Parse for the message type.
 	local infoType = info.type
@@ -383,7 +388,13 @@ function SimpleCombatLog:OnCombatEvent(event, info)
 	
 
 end
-
+local function getName(unit)
+	if reachLog and unit then
+		local _, exist, guid = pcall(UnitExists, unit)
+		if exist == 1 then return UnitName(guid) end 
+	end
+	return unit
+end
 function SimpleCombatLog:ParseInfo(id, msgType, tokens)
 	self:LevelDebug(2, "ParseInfo", id, msgType)
 	
@@ -398,26 +409,29 @@ function SimpleCombatLog:ParseInfo(id, msgType, tokens)
 	for k, v in pairs(tokens) do
 		myTokens[k] = v
 	end
-	
+        local name	
 	if myTokens.source then 
 		if myTokens.source == ParserLib_SELF then
 			myTokens.source = self:Colorize(L["You"], self:GetColorHex(id, 'player' ) )
 		else
-			myTokens.source = self:Colorize(myTokens.source, self:GetColorHex(id, self:GetUnitType(myTokens.source, true) ) )
+			name = getName(myTokens.source)
+			myTokens.source = self:Colorize(name, self:GetColorHex(id, self:GetUnitType(name, true) ) )
 		end
 	end	
 	if myTokens.victim then 
 		if myTokens.victim == ParserLib_SELF then
 			myTokens.victim = self:Colorize(L["You"], self:GetColorHex(id, 'player' ) )
 		else
-			myTokens.victim = self:Colorize(myTokens.victim, self:GetColorHex(id, self:GetUnitType(myTokens.victim, true) ) )
+			name = getName(myTokens.victim)
+			myTokens.victim = self:Colorize(name, self:GetColorHex(id, self:GetUnitType(name, true) ) )
 		end
 	end
 	if myTokens.sourceGained then 
 		if myTokens.sourceGained == ParserLib_SELF then
 			myTokens.sourceGained = self:Colorize(L["You"], self:GetColorHex(id, 'player' ) )
 		else
-			myTokens.sourceGained = self:Colorize(myTokens.sourceGained, self:GetColorHex(id, self:GetUnitType(myTokens.sourceGained, true) ) )
+			name = getName(myTokens.sourceGained)
+			myTokens.sourceGained = self:Colorize(name, self:GetColorHex(id, self:GetUnitType(name, true) ) )
 		end
 	end	
 	
