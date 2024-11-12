@@ -6,11 +6,13 @@ local defaultFormats
 local defaultColors
 local L
 
+local reachLog = LoggingCombat and LoggingCombat("RAW") == 1
+
 -- tables which will be recycled.
 local cache1 = {}
 local cache2 = {}
 
-local reachLog = LoggingCombat and LoggingCombat("RAW") == 1
+
  
 ------------------------
 --         Core         --
