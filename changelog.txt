@@ -1,3 +1,8 @@
+r27330 by layt 12.11.2024
+
++Added support for "RAW" format of combat log (SuperWOW)
++Updated libs
+
 ------------------------------------------------------------------------
 r27327 | rophy | 2007-02-06 04:05:20 -0500 (Tue, 06 Feb 2007) | 4 lines
 

@@ -2,18 +2,13 @@
 ## Title: SimpleCombatLog |cff7fff7f -Ace2-|r
 ## Notes: Suppress default combat messages, display simplified ones.
 ## Notes-esES: Suprime los mensajes de combate por defecto, mostrando unos simplificados.
-## Version: 1.1.0.$Revision: 27327 $
+## Version: 1.1.0.$Revision: 27330 $
 ## Author: Rophy
 ## OptionalDeps: Ace2, DewdropLib, ParserLib, RosterLib
 ## X-Category: Interface Enhancements
-## X-eMail: rophy123@gmail.com
-## X-ReleaseDate: $Date: 2007-02-06 04:05:20 -0500 (Tue, 06 Feb 2007) $
-## X-Website: http://www.wowace.com/wiki/SimpleCombatLog
+
+## X-ReleaseDate: $Date: 2024-11-12 $
 ## X-Embeds: Ace2, DewdropLib, ParserLib, RosterLib
-## X-RelSite-WoWI: 5008
-## X-RelSite-Curse: 4268
-## X-RelSite-UI.WoW: 2713
-## X-WoWIPortal: rophy
 
 ## SavedVariables: SimpleCombatLogDB
 ## SavedVariablesPerCharacter: SimpleCombatLogDBPerChar
